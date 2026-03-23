@@ -3,131 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Pole Dance &amp; Aerial Studio</title>
+<title>The Pole Dance & Aerial Studio</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0b14;
-  color: #fff;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #120d18;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo-box {
-  background: #fff;
-  padding: 6px 14px;
-  border-radius: 10px;
-}
-
-header img {
-  height: 40px;
-}
-
-nav a {
-  margin: 0 10px;
-  color: #ccc;
-  text-decoration: none;
-}
-
-.hero {
-  padding: 80px 30px 40px;
-}
-
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #aaa;
-  max-width: 680px;
-}
-
-.btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #d88dff;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.section-wrap {
-  padding: 60px 30px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: #1a1224;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  filter: brightness(0.9);
-  display: block;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.text-card {
-  padding: 22px;
-}
-
-.text-card p,
-.text-card a {
-  color: #d2cddd;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #d88dff;
-  color: black;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-}
+body { margin:0; font-family: Arial, sans-serif; background:#0f0b14; color:#fff; }
+header { display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#120d18; position:sticky; top:0; }
+.logo-box { background:#fff; padding:6px 14px; border-radius:10px; }
+header img { height:40px; }
+nav a { margin:0 10px; color:#ccc; text-decoration:none; }
+.hero { padding:80px 30px 40px; }
+.hero h1 { font-size:40px; }
+.hero p { color:#aaa; }
+.btn { padding:12px 20px; border:none; border-radius:20px; background:#d88dff; color:black; font-weight:bold; cursor:pointer; }
+.section-wrap { padding:60px 30px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.card { background:#1a1224; border-radius:15px; overflow:hidden; }
+.card img { width:100%; height:350px; object-fit:cover; filter:brightness(0.9); }
+.card-body { padding:15px; }
+.text-card { padding:22px; }
+.text-card p { color:#d2cddd; }
+.whatsapp { position:fixed; bottom:20px; right:20px; background:#d88dff; color:black; padding:12px 18px; border-radius:30px; font-weight:bold; text-decoration:none; }
 </style>
 </head>
 
@@ -135,7 +30,7 @@ nav a {
 
 <header>
   <div class="logo-box">
-    <img src="logo.jpg" alt="The Pole Dance & Aerial Studio logo">
+    <img src="logo.jpg">
   </div>
   <nav>
     <a href="#home">Home</a>
@@ -147,33 +42,34 @@ nav a {
 
 <section class="hero" id="home">
   <h1>Try your first pole or aerial class</h1>
-  <p>Limited bookings. Tanza Cavite.</p>
+  <p>Beginner friendly. Limited bookings. Tanza Cavite.</p>
   <br>
-  <button class="btn" onclick="window.location.href='https://wa.me/639063782296'">
-    Book via WhatsApp
-  </button>
+  <button class="btn" onclick="window.location.href='https://wa.me/639063782296'">Book via WhatsApp</button>
 </section>
 
+<!-- 🔥 UPDATED GALLERY (ONLY 2 IMAGES) -->
 <section class="gallery" id="gallery">
   <div class="section-wrap">
     <h2>Studio Experience</h2>
 
     <div class="grid">
+
       <div class="card">
-        <img src="pole1.jpg.png" alt="Pole strength and flow">
+        <img src="pole1.jpg.png">
         <div class="card-body">
-          <h3>Pole Strength &amp; Flow</h3>
+          <h3>Pole Strength & Flow</h3>
           <p>Build strength, confidence, and control.</p>
         </div>
       </div>
 
       <div class="card">
-        <img src="aerial1.jpg" alt="Aerial hoop training">
+        <img src="aerial1.jpg">
         <div class="card-body">
           <h3>Aerial Hoop</h3>
           <p>Grace, flexibility, and full-body control.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -201,26 +97,31 @@ nav a {
     <h2>Contact</h2>
 
     <div class="grid">
+
       <div class="card text-card">
         <h3>Class Info</h3>
-        <p>
-          Monday — 9:00 AM<br>
-          Thursday — 4:00 PM<br>
-          Saturday — 9:00 AM<br><br>
-          <strong>1 Class — ₱650 + ₱150 booking fee</strong>
-        </p>
+        <p>Monday — 9:00 AM<br>
+        Thursday — 4:00 PM<br>
+        Saturday — 9:00 AM<br><br>
+        <strong>1 Class — ₱650 + ₱150 booking fee</strong></p>
       </div>
 
       <div class="card text-card">
-        <h3>Social</h3>
-        <p>
-          Facebook:<br>
-          <a href="https://www.facebook.com/thepoledanceandaerialstudio" target="_blank">Open Page</a><br><br>
-          Instagram:<br>
-          <a href="https://www.instagram.com/thepoledanceaerialstudio/" target="_blank">Open Page</a>
-        </p>
+        <h3>Follow Us</h3>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:10px;">
+
+          <a href="https://www.facebook.com/thepoledanceandaerialstudio" target="_blank" style="display:flex; align-items:center; gap:10px; text-decoration:none; background:#1877F2; padding:12px 14px; border-radius:10px; color:#fff; font-weight:bold;">
+            <span>📘</span>
+            Facebook Page
+          </a>
+
+          <a href="https://www.instagram.com/thepoledanceaerialstudio/" target="_blank" style="display:flex; align-items:center; gap:10px; text-decoration:none; background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); padding:12px 14px; border-radius:10px; color:#fff; font-weight:bold;">
+            <span>📸</span>
+            Instagram Page
+          </a>
+
+        </div>
       </div>
-    </div>
   </div>
 </section>
 
