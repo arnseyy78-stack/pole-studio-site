@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes | The Pole Dance & Aerial Studio</title>
+  <style>
+    :root{--bg:#0c0911;--card:#1a1324;--card-2:#241a31;--text:#fff;--muted:#d8cfdf;--muted-2:#aa9fb8;--accent:#d88dff;--line:rgba(255,255,255,0.08);--shadow:0 22px 50px rgba(0,0,0,0.34);--max:1160px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#0c0911,#120d18,#0c0911)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(12,9,17,0.85);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 0}
+    .logo-box{background:#fff;padding:8px 16px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,0.24)}
+    .logo-box img{display:block;height:42px}
+    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    nav{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{font-size:14px;font-weight:600;color:#d4cadf}
+    nav a:hover,nav a.active{color:#fff}
+    .book-btn{background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;padding:10px 16px;border-radius:999px;font-weight:700}
+    .section{padding:76px 0}
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:0 0 10px}
+    h1{margin:0 0 12px;font-size:clamp(2.2rem,5vw,3.4rem)}
+    .copy{color:var(--muted-2);line-height:1.7;max-width:760px;margin:0 0 28px}
+    .grid-2,.grid-3{display:grid;gap:22px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:24px}
+    .card p{color:var(--muted);line-height:1.7}
+    .price-card{text-align:center;background:linear-gradient(135deg,#231433,#17101f)}
+    .price{font-size:28px;font-weight:700;color:#f3dcff;margin:10px 0 14px}
+    footer{border-top:1px solid var(--line);color:var(--muted-2);text-align:center;padding:28px 20px 40px}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;font-weight:700;box-shadow:0 14px 28px rgba(216,141,255,0.28)}
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo-box"><img src="logo.jpg" alt="Logo"></div>
+    <div class="nav-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="classes.html" class="active">Classes</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="booking.html" class="book-btn">Book</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Classes</p>
+    <h1>Train With Confidence</h1>
+    <p class="copy">Focused sessions designed to help you move better, feel stronger, and train with confidence.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Pole Dance</h3>
+        <p>Build strength, coordination, and confidence through spins, shapes, transitions, and controlled movement.</p>
+      </div>
+
+      <div class="card">
+        <h3>Aerial Hoop</h3>
+        <p>Improve flexibility, body awareness, control, and elegance through aerial conditioning and shapes.</p>
+      </div>
+    </div>
+
+    <div style="height:22px;"></div>
+
+    <div class="grid-3">
+      <div class="card"><h3>Monday</h3><p>9:00 AM</p></div>
+      <div class="card"><h3>Thursday</h3><p>4:00 PM</p></div>
+      <div class="card"><h3>Saturday</h3><p>9:00 AM</p></div>
+    </div>
+
+    <div style="height:22px;"></div>
+
+    <div class="card price-card">
+      <p class="eyebrow">Class Rate</p>
+      <div class="price">₱650 + ₱150 booking fee</div>
+      <a class="book-btn" href="booking.html">Reserve Your Slot</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 The Pole Dance &amp; Aerial Studio</footer>
+
+<a class="whatsapp" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">Chat</a>
+
+</body>
+</html>
