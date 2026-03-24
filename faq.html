@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | The Pole Dance & Aerial Studio</title>
+  <style>
+    :root{--bg:#0c0911;--card:#1a1324;--card-2:#241a31;--text:#fff;--muted:#d8cfdf;--muted-2:#aa9fb8;--accent:#d88dff;--line:rgba(255,255,255,0.08);--shadow:0 22px 50px rgba(0,0,0,0.34);--max:980px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#0c0911,#120d18,#0c0911)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(12,9,17,0.85);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 0}
+    .logo-box{background:#fff;padding:8px 16px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,0.24)}
+    .logo-box img{display:block;height:42px}
+    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    nav{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{font-size:14px;font-weight:600;color:#d4cadf}
+    nav a:hover,nav a.active{color:#fff}
+    .book-btn{background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;padding:10px 16px;border-radius:999px;font-weight:700}
+    .section{padding:76px 0}
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:0 0 10px}
+    h1{margin:0 0 12px;font-size:clamp(2.2rem,5vw,3.4rem)}
+    .copy{color:var(--muted-2);line-height:1.7;max-width:760px;margin:0 0 28px}
+    details{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}
+    summary{list-style:none;cursor:pointer;padding:22px 24px;font-weight:700;position:relative}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--accent)}
+    details[open] summary::after{content:"–"}
+    .faq-answer{padding:0 24px 22px;color:var(--muted);line-height:1.7}
+    footer{border-top:1px solid var(--line);color:var(--muted-2);text-align:center;padding:28px 20px 40px}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;font-weight:700;box-shadow:0 14px 28px rgba(216,141,255,0.28)}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo-box"><img src="logo.jpg" alt="Logo"></div>
+    <div class="nav-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="classes.html">Classes</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="booking.html" class="book-btn">Book</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">FAQ</p>
+    <h1>Frequently Asked Questions</h1>
+    <p class="copy">Everything you need to know before booking your class.</p>
+
+    <details open>
+      <summary>Do I need experience?</summary>
+      <div class="faq-answer">No experience is required. You can start from your current level and build your strength, confidence, and technique over time.</div>
+    </details>
+
+    <details>
+      <summary>How do I book a class?</summary>
+      <div class="faq-answer">Message us directly on WhatsApp or use the Book page to send your booking request.</div>
+    </details>
+
+    <details>
+      <summary>What is the class price?</summary>
+      <div class="faq-answer">1 Class is ₱650 plus a ₱150 booking fee.</div>
+    </details>
+
+    <details>
+      <summary>What should I wear?</summary>
+      <div class="faq-answer">Wear comfortable activewear that allows easy movement and support during class.</div>
+    </details>
+
+    <details>
+      <summary>When are your class schedules?</summary>
+      <div class="faq-answer">Monday — 9:00 AM<br>Thursday — 4:00 PM<br>Saturday — 9:00 AM</div>
+    </details>
+  </div>
+</section>
+
+<footer>© 2026 The Pole Dance &amp; Aerial Studio</footer>
+
+<a class="whatsapp" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">Chat</a>
+
+</body>
+</html>
