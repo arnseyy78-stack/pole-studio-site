@@ -1,644 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Pole Dance &amp; Aerial Studio</title>
+<title>Book a Class</title>
 
 <style>
-:root {
-  --bg:#0d0912;
-  --bg-soft:#15101d;
-  --card:#1a1323;
-  --card-2:#23192f;
-  --text:#ffffff;
-  --muted:#d9d1e3;
-  --muted-2:#aa9fb8;
-  --accent:#d88dff;
-  --accent-2:#f3d8ff;
-  --line:rgba(255,255,255,0.08);
-  --shadow:0 22px 50px rgba(0,0,0,0.34);
+body{
+margin:0;
+font-family:Arial;
+background:#0c0911;
+color:white;
 }
 
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(216,141,255,0.12), transparent 26%),
-    radial-gradient(circle at top right, rgba(243,216,255,0.08), transparent 22%),
-    linear-gradient(180deg, #0d0912 0%, #130e1b 48%, #0d0912 100%);
-  color:var(--text);
+.container{
+width:90%;
+max-width:600px;
+margin:auto;
+padding:40px 0;
 }
 
-a { color:inherit; text-decoration:none; }
+h1{text-align:center}
 
-header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 32px;
-  background:rgba(13,9,18,0.78);
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  z-index:20;
-  backdrop-filter:blur(14px);
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+background:#1a1324;
+color:white;
 }
 
-.logo-box {
-  background:#fff;
-  padding:8px 16px;
-  border-radius:12px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.26);
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:20px;
+background:#d88dff;
+color:black;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
 }
 
-header img {
-  height:42px;
-  display:block;
+.card{
+background:#1a1324;
+padding:20px;
+border-radius:14px;
+margin-bottom:20px;
 }
 
-nav {
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-nav a {
-  color:#d4cadf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  letter-spacing:.02em;
-  transition:color .2s ease, opacity .2s ease;
-}
-
-nav a:hover { color:#fff; }
-
-.hero {
-  position:relative;
-  overflow:hidden;
-  padding:120px 32px 96px;
-  background:
-    linear-gradient(180deg, rgba(8,6,12,0.28), rgba(8,6,12,0.82)),
-    linear-gradient(90deg, rgba(13,9,18,0.96) 0%, rgba(13,9,18,0.78) 46%, rgba(13,9,18,0.36) 100%),
-    url('pole1.jpg.png') center/cover no-repeat;
-}
-
-.hero::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at left center, rgba(216,141,255,0.16), transparent 30%);
-  pointer-events:none;
-}
-
-.hero-content {
-  position:relative;
-  max-width:760px;
-  animation:fadeUp .9s ease both;
-}
-
-.hero-badge {
-  display:inline-block;
-  margin-bottom:18px;
-  padding:9px 15px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.12);
-  color:#ead9fb;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-}
-
-.hero h1 {
-  margin:0 0 14px;
-  font-size:clamp(2.8rem, 6vw, 4.6rem);
-  line-height:1.02;
-}
-
-.hero p {
-  margin:0 0 22px;
-  max-width:700px;
-  font-size:18px;
-  line-height:1.7;
-  color:var(--muted);
-}
-
-.hero-actions {
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:18px;
-}
-
-.hero-note {
-  color:var(--accent-2);
-  font-weight:700;
-}
-
-.btn, .btn-link {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 22px;
-  border:none;
-  border-radius:999px;
-  background:linear-gradient(135deg, var(--accent), #c46fff);
-  color:#120d18;
-  font-weight:700;
-  cursor:pointer;
-  transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
-  box-shadow:0 12px 26px rgba(216,141,255,0.22);
-}
-
-.btn:hover, .btn-link:hover {
-  transform:translateY(-2px);
-  box-shadow:0 16px 30px rgba(216,141,255,0.28);
-}
-
-.btn-secondary {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 22px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.05);
-  color:#fff;
-  font-weight:700;
-  transition:transform .22s ease, background .22s ease, box-shadow .22s ease;
-}
-
-.btn-secondary:hover {
-  transform:translateY(-2px);
-  background:rgba(255,255,255,0.09);
-  box-shadow:0 16px 30px rgba(0,0,0,0.22);
-}
-
-.section-wrap {
-  width:min(1160px, calc(100% - 40px));
-  margin:0 auto;
-  padding:76px 0;
-}
-
-.eyebrow {
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-size:12px;
-  margin:0 0 10px;
-}
-
-.section-wrap h2 {
-  margin:0 0 12px;
-  font-size:clamp(2rem, 4vw, 2.8rem);
-}
-
-.section-copy {
-  max-width:760px;
-  color:var(--muted-2);
-  line-height:1.7;
-  margin:0 0 28px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:22px;
-}
-
-.grid-3 {
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0,1fr));
-  gap:22px;
-}
-
-.card {
-  background:linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
-  border-radius:20px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 26px 44px rgba(0,0,0,0.36);
-}
-
-.card img {
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  filter:brightness(0.92);
-  display:block;
-}
-
-.card-body {
-  padding:20px;
-}
-
-.card-body h3, .text-card h3, .faq-card h3 {
-  margin-top:0;
-}
-
-.card-body p, .text-card p, .text-card a, .faq-card p {
-  color:var(--muted);
-  line-height:1.7;
-}
-
-.text-card {
-  padding:24px;
-}
-
-.feature-grid {
-  display:grid;
-  grid-template-columns:repeat(4, minmax(0,1fr));
-  gap:16px;
-  margin-top:26px;
-}
-
-.feature-pill {
-  background:rgba(255,255,255,0.04);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:18px;
-  color:var(--muted);
-}
-
-.feature-pill strong {
-  display:block;
-  color:#fff;
-  margin-bottom:6px;
-}
-
-.testimonial-quote {
-  font-size:17px;
-  line-height:1.8;
-  color:#f7f1fb;
-}
-
-.testimonial-name {
-  margin-top:16px;
-  color:var(--accent-2);
-  font-weight:700;
-}
-
-.faq-grid {
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:22px;
-}
-
-.faq-card {
-  background:linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:24px;
-  box-shadow:var(--shadow);
-}
-
-.booking-banner {
-  text-align:center;
-  padding:40px 28px;
-  background:
-    radial-gradient(circle at top, rgba(216,141,255,0.16), transparent 42%),
-    linear-gradient(135deg, #241332 0%, #1a1224 100%);
-}
-
-.booking-price {
-  font-size:21px;
-  font-weight:700;
-  margin:8px 0 18px;
-}
-
-.contact-layout {
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:22px;
-}
-
-.info-list p {
-  margin:0 0 12px;
-}
-
-.social-stack {
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin-top:12px;
-}
-
-.social-btn {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:13px 14px;
-  border-radius:14px;
-  color:#fff;
-  font-weight:700;
-  transition:transform .22s ease, box-shadow .22s ease;
-}
-
-.social-btn:hover { transform:translateY(-2px); }
-
-.social-facebook {
-  background:#1877F2;
-  box-shadow:0 10px 22px rgba(24,119,242,0.26);
-}
-
-.social-instagram {
-  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  box-shadow:0 10px 22px rgba(220,39,67,0.26);
-}
-
-.location-card {
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-
-.location-box {
-  padding:22px;
-  border-radius:18px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,0.03);
-}
-
-.location-box h3 { margin-top:0; }
-.location-box p { color:var(--muted); line-height:1.7; }
-
-footer {
-  border-top:1px solid var(--line);
-  color:var(--muted-2);
-  text-align:center;
-  padding:26px 20px 40px;
-}
-
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:linear-gradient(135deg, var(--accent), #c46fff);
-  color:#120d18;
-  padding:13px 20px;
-  border-radius:999px;
-  font-weight:700;
-  text-decoration:none;
-  animation:floaty 2.2s ease-in-out infinite;
-  box-shadow:0 14px 28px rgba(216,141,255,0.28);
-  z-index:30;
-}
-
-@keyframes floaty {
-  0% { transform:translateY(0); }
-  50% { transform:translateY(-4px); }
-  100% { transform:translateY(0); }
-}
-
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(22px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-@media (max-width: 980px) {
-  .grid, .grid-3, .feature-grid, .faq-grid, .contact-layout {
-    grid-template-columns:1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-    padding:14px 20px;
-  }
-
-  .hero {
-    padding:94px 20px 76px;
-    background-position:center;
-  }
-
-  .hero p {
-    font-size:16px;
-  }
-
-  .section-wrap {
-    width:min(1160px, calc(100% - 28px));
-    padding:54px 0;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo-box">
-    <img src="logo.jpg" alt="The Pole Dance &amp; Aerial Studio logo">
-  </div>
+<div class="container">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#classes">Classes</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<h1>Book Your Class</h1>
 
-<section class="hero" id="home">
-  <div class="hero-content section-wrap" style="padding:0; margin:0; width:auto;">
-    <span class="hero-badge">Pole • Aerial • Strength • Confidence</span>
-    <h1>A luxury pole and aerial studio experience.</h1>
-    <p>Discover movement, elegance, strength, and confidence inside a beautifully styled studio environment in Tanza, Cavite. Limited weekly bookings available.</p>
+<div class="card">
 
-    <div class="hero-actions">
-      <a class="btn-link" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">✦ Book via WhatsApp</a>
-      <a class="btn-secondary" href="#gallery">View Gallery</a>
-    </div>
+<input id="name" placeholder="Your Name">
 
-    <div class="hero-note">1 Class — ₱650 plus ₱150 booking fee</div>
+<input id="phone" placeholder="Phone Number">
 
-    <div class="feature-grid">
-      <div class="feature-pill"><strong>Pole Dance</strong>Spins, shapes, strength, and graceful flow.</div>
-      <div class="feature-pill"><strong>Aerial Hoop</strong>Elegance, flexibility, and body control.</div>
-      <div class="feature-pill"><strong>Weekly Schedule</strong>Monday, Thursday, and Saturday classes.</div>
-      <div class="feature-pill"><strong>Fast Booking</strong>Reserve directly through WhatsApp.</div>
-    </div>
-  </div>
-</section>
+<select id="classType">
+<option>Pole Dance</option>
+<option>Aerial Hoop</option>
+</select>
 
-<section id="gallery">
-  <div class="section-wrap">
-    <p class="eyebrow">Gallery</p>
-    <h2>Studio Experience</h2>
-    <p class="section-copy">A refined look into the strength, elegance, and atmosphere inside The Pole Dance &amp; Aerial Studio.</p>
+<select id="day">
+<option>Monday 9AM</option>
+<option>Thursday 4PM</option>
+<option>Saturday 9AM</option>
+</select>
 
-    <div class="grid">
-      <div class="card">
-        <img src="pole1.jpg.png" alt="Pole strength and flow">
-        <div class="card-body">
-          <h3>Pole Strength &amp; Flow</h3>
-          <p>Build strength, confidence, control, and beautiful movement in a premium studio setting.</p>
-        </div>
-      </div>
+<textarea id="notes" placeholder="Notes"></textarea>
 
-      <div class="card">
-        <img src="aerial1.jpg" alt="Aerial hoop training">
-        <div class="card-body">
-          <h3>Aerial Hoop</h3>
-          <p>Grace, flexibility, and full-body control through elegant aerial hoop training.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<button onclick="sendBooking()">🔥 Reserve My Spot Now</button>
 
-<section id="classes">
-  <div class="section-wrap">
-    <p class="eyebrow">Classes</p>
-    <h2>Train With Confidence</h2>
-    <p class="section-copy">Purposeful sessions designed to help you feel stronger, move better, and enjoy every step of your progress.</p>
+</div>
 
-    <div class="grid">
-      <div class="card text-card">
-        <h3>Pole Dance</h3>
-        <p>Build upper-body strength, coordination, confidence, and body awareness through spins, transitions, shapes, and controlled flow.</p>
-      </div>
+</div>
 
-      <div class="card text-card">
-        <h3>Aerial Hoop</h3>
-        <p>Improve flexibility, grace, control, and elegance while training beautiful shapes and aerial conditioning.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<script>
 
-<section id="testimonials">
-  <div class="section-wrap">
-    <p class="eyebrow">Testimonials</p>
-    <h2>What Students Say</h2>
-    <p class="section-copy">A luxury studio feel is not just how it looks — it is how it makes students feel when they train.</p>
+function sendBooking(){
 
-    <div class="grid-3">
-      <div class="card text-card">
-        <div class="testimonial-quote">“The classes are so much fun and empowering. I left feeling stronger, happier, and more confident.”</div>
-        <div class="testimonial-name">— Student Review</div>
-      </div>
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let classType=document.getElementById("classType").value;
+let day=document.getElementById("day").value;
+let notes=document.getElementById("notes").value;
 
-      <div class="card text-card">
-        <div class="testimonial-quote">“Beautiful studio vibe and motivating sessions. It feels welcoming and professional at the same time.”</div>
-        <div class="testimonial-name">— Student Review</div>
-      </div>
+let message = 
+`Hi! I'd like to book a class 💜
 
-      <div class="card text-card">
-        <div class="testimonial-quote">“I love how polished everything feels. The classes make you feel elegant, strong, and supported.”</div>
-        <div class="testimonial-name">— Student Review</div>
-      </div>
-    </div>
-  </div>
-</section>
+Name: ${name}
+Phone: ${phone}
+Class: ${classType}
+Schedule: ${day}
+Notes: ${notes}
 
-<section id="faq">
-  <div class="section-wrap">
-    <p class="eyebrow">FAQ</p>
-    <h2>Frequently Asked Questions</h2>
+Please confirm my slot.`;
 
-    <div class="faq-grid">
-      <div class="faq-card">
-        <h3>Do I need experience?</h3>
-        <p>You can join from your current level and build your strength and confidence over time.</p>
-      </div>
+window.open("https://wa.me/639063782296?text=" + encodeURIComponent(message));
 
-      <div class="faq-card">
-        <h3>How do I book?</h3>
-        <p>Message us on WhatsApp to reserve your slot and receive confirmation details.</p>
-      </div>
+}
 
-      <div class="faq-card">
-        <h3>What should I wear?</h3>
-        <p>Comfortable activewear that allows movement and support is recommended for class.</p>
-      </div>
-
-      <div class="faq-card">
-        <h3>Is payment required first?</h3>
-        <p>Yes. Bookings are confirmed after payment, and the ₱150 booking fee is part of that process.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-wrap">
-    <div class="card booking-banner">
-      <p class="eyebrow">Book Now</p>
-      <h2 style="margin-top:0;">Reserve your class today</h2>
-      <p class="section-copy" style="margin:0 auto 18px;">Limited slots available each week. Message us now on WhatsApp to secure your booking.</p>
-      <div class="booking-price">1 Class — ₱650 + ₱150 booking fee</div>
-      <a class="btn-link" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">✦ Book via WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="section-wrap">
-    <p class="eyebrow">Contact</p>
-    <h2>Visit, Book, and Follow Us</h2>
-    <p class="section-copy">Reserve your class through WhatsApp and stay connected through our official social pages.</p>
-
-    <div class="contact-layout">
-      <div class="card text-card">
-        <div class="info-list">
-          <h3>Class Info</h3>
-          <p>Monday — 9:00 AM</p>
-          <p>Thursday — 4:00 PM</p>
-          <p>Saturday — 9:00 AM</p>
-          <p><strong>1 Class — ₱650 + ₱150 booking fee</strong></p>
-
-          <h3 style="margin-top:26px;">Studio Address</h3>
-          <p>3rd Floor, ELLG Building, Retirees Village I, Tanza - Trece Martires Rd, Mulawin, Tanza, 4108 Cavite</p>
-        </div>
-      </div>
-
-      <div class="location-card">
-        <div class="location-box">
-          <h3>Follow Us</h3>
-          <p>Stay updated with class schedules, studio content, and announcements through our official pages.</p>
-          <div class="social-stack">
-            <a href="https://www.facebook.com/thepoledanceandaerialstudio" target="_blank" class="social-btn social-facebook">
-              <span>📘</span>
-              Facebook Page
-            </a>
-
-            <a href="https://www.instagram.com/thepoledanceaerialstudio/" target="_blank" class="social-btn social-instagram">
-              <span>📸</span>
-              Instagram Page
-            </a>
-          </div>
-        </div>
-
-        <div class="location-box">
-          <h3>Book Direct</h3>
-          <p>Questions, class inquiries, or ready to reserve? Message us directly on WhatsApp.</p>
-          <a class="btn-link" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">✦ Book via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 The Pole Dance &amp; Aerial Studio
-</footer>
-
-<a href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio." class="whatsapp">Chat</a>
+</script>
 
 </body>
 </html>
