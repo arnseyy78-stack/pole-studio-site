@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Class | The Pole Dance & Aerial Studio</title>
+  <style>
+    :root{--bg:#0c0911;--card:#1a1324;--card-2:#241a31;--text:#fff;--muted:#d8cfdf;--muted-2:#aa9fb8;--accent:#d88dff;--line:rgba(255,255,255,0.08);--shadow:0 22px 50px rgba(0,0,0,0.34);--max:1100px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#0c0911,#120d18,#0c0911)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(12,9,17,0.85);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 0}
+    .logo-box{background:#fff;padding:8px 16px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,0.24)}
+    .logo-box img{display:block;height:42px}
+    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    nav{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{font-size:14px;font-weight:600;color:#d4cadf}
+    nav a:hover,nav a.active{color:#fff}
+    .book-btn{background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;padding:10px 16px;border-radius:999px;font-weight:700}
+    .section{padding:76px 0}
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:0 0 10px}
+    h1{margin:0 0 12px;font-size:clamp(2.2rem,5vw,3.4rem)}
+    .copy{color:var(--muted-2);line-height:1.7;max-width:760px;margin:0 0 28px}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:26px}
+    .card p,.card li,label{color:var(--muted);line-height:1.7}
+    ul{margin:0;padding-left:18px}
+    .form-group{margin-bottom:16px}
+    input,select,textarea{
+      width:100%;
+      margin-top:6px;
+      padding:13px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      color:#fff;
+      font:inherit;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .submit-btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:100%;padding:14px 22px;border:none;border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;
+      font-weight:700;cursor:pointer;
+    }
+    .info-box{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      margin-top:16px;
+    }
+    footer{border-top:1px solid var(--line);color:var(--muted-2);text-align:center;padding:28px 20px 40px}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;font-weight:700;box-shadow:0 14px 28px rgba(216,141,255,0.28)}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo-box"><img src="logo.jpg" alt="Logo"></div>
+    <div class="nav-right">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="classes.html">Classes</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="booking.html" class="book-btn active">Book</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Booking</p>
+    <h1>Book Your Class</h1>
+    <p class="copy">Fill in your details below, then send your booking request directly through WhatsApp.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Booking Form</h2>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp Number</label>
+          <input id="phone" type="text" placeholder="09XXXXXXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="classType">Class Type</label>
+          <select id="classType">
+            <option value="Pole Dance">Pole Dance</option>
+            <option value="Aerial Hoop">Aerial Hoop</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="day">Preferred Schedule</label>
+          <select id="day">
+            <option value="Monday - 9:00 AM">Monday - 9:00 AM</option>
+            <option value="Thursday - 4:00 PM">Thursday - 4:00 PM</option>
+            <option value="Saturday - 9:00 AM">Saturday - 9:00 AM</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Extra Notes</label>
+          <textarea id="notes" placeholder="Any questions or notes"></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="sendBooking()">Reserve My Spot Now</button>
+      </div>
+
+      <div class="card">
+        <h2>Booking Details</h2>
+        <ul>
+          <li>Monday — 9:00 AM</li>
+          <li>Thursday — 4:00 PM</li>
+          <li>Saturday — 9:00 AM</li>
+        </ul>
+
+        <div class="info-box">
+          <h3>Class Price</h3>
+          <p><strong>1 Class — ₱650 + ₱150 booking fee</strong></p>
+        </div>
+
+        <div class="info-box">
+          <h3>Booking Policy</h3>
+          <p>Bookings are limited and confirmed after payment.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Studio Address</h3>
+          <p>3rd Floor, ELLG Building, Retirees Village I, Tanza - Trece Martires Rd, Mulawin, Tanza, 4108 Cavite</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 The Pole Dance &amp; Aerial Studio</footer>
+
+<a class="whatsapp" href="https://wa.me/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">Chat</a>
+
+<script>
+function sendBooking() {
+  const name = document.getElementById('name').value || 'Not provided';
+  const phone = document.getElementById('phone').value || 'Not provided';
+  const classType = document.getElementById('classType').value;
+  const day = document.getElementById('day').value;
+  const notes = document.getElementById('notes').value || 'None';
+
+  const message =
+    `Hi! I'd like to book a class at The Pole Dance & Aerial Studio.%0A%0A` +
+    `Name: ${encodeURIComponent(name)}%0A` +
+    `Phone: ${encodeURIComponent(phone)}%0A` +
+    `Class Type: ${encodeURIComponent(classType)}%0A` +
+    `Preferred Schedule: ${encodeURIComponent(day)}%0A` +
+    `Notes: ${encodeURIComponent(notes)}`;
+
+  window.location.href = `https://wa.me/639063782296?text=${message}`;
+}
+</script>
+
+</body>
+</html>
