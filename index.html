@@ -1,117 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Class</title>
+<title>The Pole Dance & Aerial Studio</title>
 
 <style>
+:root{
+--bg:#0c0911;
+--card:#1a1324;
+--card-2:#241a31;
+--text:#fff;
+--muted:#d8cfdf;
+--accent:#d88dff;
+--line:rgba(255,255,255,0.08);
+--shadow:0 22px 50px rgba(0,0,0,0.34);
+}
+
+*{box-sizing:border-box}
+
 body{
 margin:0;
 font-family:Arial;
-background:#0c0911;
+background:linear-gradient(#0c0911,#120d18,#0c0911);
 color:white;
 }
 
-.container{
-width:90%;
+/* NAV */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 30px;
+background:#0c0911;
+border-bottom:1px solid var(--line);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo-box{
+background:#fff;
+padding:6px 14px;
+border-radius:10px;
+}
+
+.logo-box img{
+height:40px;
+}
+
+nav a{
+margin:0 10px;
+color:#aaa;
+text-decoration:none;
+font-weight:600;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+.book-btn{
+background:#d88dff;
+color:#000;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+padding:100px 20px;
+text-align:center;
+background:url('pole1.jpg.png') center/cover;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
 max-width:600px;
 margin:auto;
-padding:40px 0;
 }
 
-h1{text-align:center}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-border-radius:10px;
-border:none;
-background:#1a1324;
-color:white;
-}
-
-button{
-width:100%;
-padding:15px;
+.hero button{
+margin-top:20px;
+padding:14px 24px;
+background:#d88dff;
 border:none;
 border-radius:20px;
-background:#d88dff;
-color:black;
 font-weight:bold;
-font-size:16px;
 cursor:pointer;
 }
 
-.card{
-background:#1a1324;
-padding:20px;
-border-radius:14px;
-margin-bottom:20px;
+/* SECTION */
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+background:linear-gradient(180deg,var(--card),var(--card-2));
+padding:20px;
+border-radius:16px;
+box-shadow:var(--shadow);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.cta{
+text-align:center;
+margin-top:40px;
+}
+
+/* FOOTER */
+footer{
+padding:30px;
+text-align:center;
+color:#aaa;
+border-top:1px solid var(--line);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.grid{grid-template-columns:1fr}
+.hero h1{font-size:32px}
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+<div class="logo-box">
+<img src="logo.jpg">
+</div>
 
-<h1>Book Your Class</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="classes.html">Classes</a>
+<a href="testimonials.html">Testimonials</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="booking.html" class="book-btn">Book</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Luxury Pole & Aerial Studio</h1>
+<p>Train strength, confidence, and elegance in a premium studio experience.</p>
+
+<a href="booking.html">
+<button>🔥 Book a Class</button>
+</a>
+</section>
+
+<section class="section">
+
+<h2>Our Classes</h2>
+
+<div class="grid">
 
 <div class="card">
+<img src="pole1.jpg.png">
+<h3>Pole Dance</h3>
+<p>Build strength, control, and confidence.</p>
+</div>
 
-<input id="name" placeholder="Your Name">
-
-<input id="phone" placeholder="Phone Number">
-
-<select id="classType">
-<option>Pole Dance</option>
-<option>Aerial Hoop</option>
-</select>
-
-<select id="day">
-<option>Monday 9AM</option>
-<option>Thursday 4PM</option>
-<option>Saturday 9AM</option>
-</select>
-
-<textarea id="notes" placeholder="Notes"></textarea>
-
-<button onclick="sendBooking()">🔥 Reserve My Spot Now</button>
-
+<div class="card">
+<img src="aerial1.jpg">
+<h3>Aerial Hoop</h3>
+<p>Flexibility, elegance, and body awareness.</p>
 </div>
 
 </div>
 
-<script>
+<div class="cta">
+<p><strong>₱650 + ₱150 booking fee</strong></p>
+<a href="booking.html">
+<button>Reserve Now</button>
+</a>
+</div>
 
-function sendBooking(){
+</section>
 
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let classType=document.getElementById("classType").value;
-let day=document.getElementById("day").value;
-let notes=document.getElementById("notes").value;
-
-let message = 
-`Hi! I'd like to book a class 💜
-
-Name: ${name}
-Phone: ${phone}
-Class: ${classType}
-Schedule: ${day}
-Notes: ${notes}
-
-Please confirm my slot.`;
-
-window.open("https://wa.me/639063782296?text=" + encodeURIComponent(message));
-
-}
-
-</script>
+<footer>
+© 2026 The Pole Dance & Aerial Studio
+</footer>
 
 </body>
 </html>
