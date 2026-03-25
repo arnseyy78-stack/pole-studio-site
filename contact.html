@@ -4,39 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | The Pole Dance & Aerial Studio</title>
-  <style>
-    :root{--bg:#0c0911;--card:#1a1324;--card-2:#241a31;--text:#fff;--muted:#d8cfdf;--muted-2:#aa9fb8;--accent:#d88dff;--accent-2:#f3dcff;--line:rgba(255,255,255,0.08);--shadow:0 22px 50px rgba(0,0,0,0.34);--max:1100px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#0c0911,#120d18,#0c0911)}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(12,9,17,0.85);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 0}
-    .logo-box{background:#fff;padding:8px 16px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,0.24)}
-    .logo-box img{display:block;height:42px}
-    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-    nav{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{font-size:14px;font-weight:600;color:#d4cadf}
-    nav a:hover,nav a.active{color:#fff}
-    .book-btn{background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;padding:10px 16px;border-radius:999px;font-weight:700}
-    .section{padding:76px 0}
-    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:0 0 10px}
-    h1{margin:0 0 12px;font-size:clamp(2.2rem,5vw,3.4rem)}
-    .copy{color:var(--muted-2);line-height:1.7;max-width:760px;margin:0 0 28px}
-    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:26px}
-    .card p{color:var(--muted);line-height:1.7}
-    .label{color:var(--accent-2);font-weight:700;margin-top:18px;margin-bottom:8px}
-    .social-stack{display:flex;flex-direction:column;gap:12px;margin-top:14px}
-    .social-btn{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:14px;color:#fff;font-weight:700}
-    .social-facebook{background:#1877F2;box-shadow:0 10px 22px rgba(24,119,242,0.26)}
-    .social-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);box-shadow:0 10px 22px rgba(220,39,67,0.26)}
-    .map-wrap{margin-top:18px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .map-wrap iframe{width:100%;height:320px;border:0;display:block}
-    footer{border-top:1px solid var(--line);color:var(--muted-2);text-align:center;padding:28px 20px 40px}
-    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#c76fff);color:#120d18;font-weight:700;box-shadow:0 14px 28px rgba(216,141,255,0.28)}
-    @media (max-width:900px){.contact-layout{grid-template-columns:1fr}}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -57,43 +25,47 @@
   </div>
 </header>
 
-<section class="section">
+<section class="banner">
   <div class="container">
     <p class="eyebrow">Contact</p>
     <h1>Come train with us</h1>
     <p class="copy">Questions, bookings, and class inquiries are welcome. Reach out through WhatsApp or our official social pages.</p>
+  </div>
+</section>
 
-    <div class="contact-layout">
-      <div class="card">
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="card text-card">
         <h3>The Pole Dance &amp; Aerial Studio</h3>
 
-        <div class="label">Studio Address</div>
-        <p>
+        <p><strong>Studio Address</strong><br>
           3rd Floor, ELLG Building<br>
           Retirees Village I<br>
           Tanza - Trece Martires Rd, Mulawin<br>
           Tanza, 4108 Cavite
         </p>
 
-        <div class="label">Class Schedule</div>
-        <p>
+        <p><strong>Class Schedule</strong><br>
           Monday — 9:00 AM<br>
           Thursday — 4:00 PM<br>
           Saturday — 9:00 AM
         </p>
 
-        <div class="label">Class Rate</div>
-        <p><strong>1 Class — ₱650 + ₱150 booking fee</strong></p>
+        <p><strong>Class Rate</strong><br>
+          1 Class — ₱650 + ₱150 booking fee
+        </p>
 
-        <div class="label">Direct Contact</div>
-        <p>WhatsApp: 09063782296</p>
+        <p><strong>Direct Contact</strong><br>
+          WhatsApp: 09063782296
+        </p>
 
         <div class="map-wrap">
           <iframe src="https://www.google.com/maps?q=3rd%20Floor%2C%20ELLG%20Building%2C%20Retirees%20Village%20I%2C%20Tanza%20-%20Trece%20Martires%20Rd%2C%20Mulawin%2C%20Tanza%2C%204108%20Cavite&output=embed" loading="lazy"></iframe>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card text-card">
         <h3>Follow Us</h3>
         <p>Stay updated with class schedules, studio content, and announcements.</p>
 
@@ -110,7 +82,7 @@
         </div>
 
         <div style="margin-top:22px;">
-          <a class="book-btn" href="booking.html">Book Now</a>
+          <a class="btn" href="booking.html">Book Now</a>
         </div>
       </div>
     </div>
