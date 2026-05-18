@@ -100,27 +100,13 @@
       <input type="checkbox" id="waiverAgree" required>
       I have read and agree to the waiver and release agreement.
     </label>
-
+<button type="button" class="submit-btn" onclick="validateWaiver()">
+  Reserve My Spot Now
+</button>
   </div>
 
 </div>
-        <button class="submit-btn" onclick="validateWaiver()">
-  <label class="waiver-check">
-  <input type="checkbox" id="waiverCheck">
-  I have read and agree to the waiver and release agreement.
-</label>
-
-<button id="reserveBtn" class="submit-btn" disabled>
-  Reserve My Spot Now
-</button>
-
-<script>
-const waiverCheck = document.getElementById("waiverCheck");
-const reserveBtn = document.getElementById("reserveBtn");
-
-waiverCheck.addEventListener("change", function () {
-    reserveBtn.disabled = !this.checked;
-});
+      
 
 reserveBtn.addEventListener("click", function () {
     if (waiverCheck.checked) {
