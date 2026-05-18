@@ -33,7 +33,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     `Students: ${students}%0A%0A` +
     `I will send my proof of payment.`;
 
-  const whatsappNumber = "639063782296";
+  const whatsappNumber = "639910194877";
 
   const whatsappLink =
     `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
