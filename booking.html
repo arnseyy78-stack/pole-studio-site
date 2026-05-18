@@ -141,40 +141,7 @@
 <a class="whatsapp" href="https://https://api.whatsapp.com/send?phone=639063782296&text=/639063782296?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20class%20at%20The%20Pole%20Dance%20%26%20Aerial%20Studio.">Chat</a>
 
 <script>
-  function validateWaiver() {
-    const waiverChecked = document.getElementById("waiverAgree").checked;
-    const signature = document.getElementById("signature").value.trim();
-
-    if (!waiverChecked) {
-      alert("Please agree to the waiver before booking.");
-      return;
-    }
-
-    if (signature === "") {
-      alert("Please enter your digital signature.");
-      return;
-    }
-
-    sendBooking();
-  }
-
-  function sendBooking() {
-    const name = document.getElementById("name").value || "Not provided";
-    const phone = document.getElementById("phone").value || "Not provided";
-    const classType = document.getElementById("classType").value;
-    const day = document.getElementById("day").value;
-    const notes = document.getElementById("notes").value || "None";
-
-    const message =
-      `Hi! I'd like to book a class at The Pole Dance & Aerial Studio.%0A%0A` +
-      `Name: ${encodeURIComponent(name)}%0A` +
-      `Phone: ${encodeURIComponent(phone)}%0A` +
-      `Class Type: ${encodeURIComponent(classType)}%0A` +
-      `Preferred Schedule: ${encodeURIComponent(day)}%0A` +
-      `Notes: ${encodeURIComponent(notes)}`;
-
-    window.location.href = `https://api.whatsapp.com/send?phone=639063782296&text=${message}`;
-  }
+  
 </script>
 
 </body>
