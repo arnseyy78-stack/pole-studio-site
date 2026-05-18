@@ -70,7 +70,40 @@
           <label for="notes">Extra Notes</label>
           <textarea id="notes" placeholder="Any questions or notes"></textarea>
         </div>
+<div class="waiver-section">
 
+  <h2>Liability Waiver & Agreement</h2>
+
+  <div class="waiver-scroll">
+
+    <iframe 
+      src="Legacy_Pole_Aerial_Waiver.pdf"
+      width="100%"
+      height="300px"
+      style="border:none;">
+    </iframe>
+
+  </div>
+
+  <div class="signature-section">
+
+    <label>Digital Signature</label>
+
+    <input 
+      type="text" 
+      id="signature"
+      placeholder="Type your full legal name"
+      required
+    >
+
+    <label class="checkbox-waiver">
+      <input type="checkbox" id="waiverAgree" required>
+      I have read and agree to the waiver and release agreement.
+    </label>
+
+  </div>
+
+</div>
         <button class="submit-btn" onclick="sendBooking()">Reserve My Spot Now</button>
       </div>
 
