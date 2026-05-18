@@ -105,7 +105,29 @@
 
 </div>
         <button class="submit-btn" onclick="validateWaiver()">
+  <label class="waiver-check">
+  <input type="checkbox" id="waiverCheck">
+  I have read and agree to the waiver and release agreement.
+</label>
+
+<button id="reserveBtn" class="submit-btn" disabled>
   Reserve My Spot Now
+</button>
+
+<script>
+const waiverCheck = document.getElementById("waiverCheck");
+const reserveBtn = document.getElementById("reserveBtn");
+
+waiverCheck.addEventListener("change", function () {
+    reserveBtn.disabled = !this.checked;
+});
+
+reserveBtn.addEventListener("click", function () {
+    if (waiverCheck.checked) {
+        window.location.href = "https://wa.me/639910194877?text=Hi%20Legacy%20Dance%20Studio,%20I%20have%20read%20the%20waiver%20and%20would%20like%20to%20book%20a%20class.";
+    }
+});
+</script>
 </button>
       </div>
 
