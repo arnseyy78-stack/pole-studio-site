@@ -104,7 +104,18 @@
   Reserve My Spot Now
 </button>
   </div>
+<script>
+function validateWaiver() {
+    const waiver = document.getElementById("waiverAgree");
 
+    if (!waiver.checked) {
+        alert("Please agree to the waiver before booking.");
+        return;
+    }
+
+    window.location.href = "https://api.whatsapp.com/send?phone=639910194877&text=Hi%20Legacy%20Dance%20Studio%2C%20I%20have%20read%20and%20agreed%20to%20the%20waiver.%20I%20would%20like%20to%20book%20a%20class.";
+}
+</script>
 </div>
       
 
