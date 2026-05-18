@@ -461,3 +461,63 @@ footer{
     grid-template-columns:1fr;
   }
 }
+.booking-section {
+  max-width: 760px;
+  margin: 60px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.payment-box {
+  background: #faf7f0;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e6d8b8;
+}
+
+.note {
+  font-size: 14px;
+  color: #777;
+}
+
+.book-btn {
+  background: #111;
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirmation {
+  margin-top: 25px;
+  padding: 25px;
+  background: #f6f1e7;
+  border-radius: 15px;
+}
+
+.hidden {
+  display: none;
+}
