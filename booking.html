@@ -1,1 +1,366 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Book Online | Legacy Pole & Aerial Dance Studio Tanza</title><meta name="description" content="Book your pole dance or aerial hoop class online in Tanza, Cavite. Complete student details, waiver, class package, and payment confirmation."><meta name="robots" content="index, follow"><link rel="canonical" href="https://arnseyy78-stack.github.io/pole-studio-site/booking.html"><meta property="og:title" content="Book Online | Legacy Pole & Aerial Dance Studio Tanza"><meta property="og:description" content="Book your pole dance or aerial hoop class online in Tanza, Cavite. Complete student details, waiver, class package, and payment confirmation."><meta property="og:type" content="website"><meta property="og:image" content="https://arnseyy78-stack.github.io/pole-studio-site/studio1.jpg.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="container nav"><a class="logo-card" href="index.html">LEGACY POLE & AERIAL DANCE STUDIO</a><nav class="nav-links"><a href="index.html">Home</a><a href="classes.html">Classes</a><a href="booking.html" class="book-pill">Book Now</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header><main class="booking-wrap"><div class="container"><p class="eyebrow">Online Booking</p><h1>Book Your Class</h1><p>Complete your details, sign the waiver, choose your class, then send your booking and payment proof.</p><div class="progress"><div class="step-dot active">1. Info</div><div class="step-dot active">2. Waiver</div><div class="step-dot active">3. Calendar</div><div class="step-dot active">4. Package</div><div class="step-dot active">5. Payment</div></div><div class="booking-grid"><section class="panel"><form class="booking-form" onsubmit="event.preventDefault();validateAndSendBooking();"><h2>Student Information</h2><div class="form-row"><div><label for="name">Full Name</label><input id="name" required></div><div><label for="phone">Mobile Number</label><input id="phone" type="tel" required></div></div><label for="email">Email Address</label><input id="email" type="email" required><h2>Waiver Agreement</h2><iframe class="waiver-frame" src="Legacy_Pole_Aerial_Waiver.pdf" title="Student waiver"></iframe><label for="signature">Digital Signature</label><input id="signature" placeholder="Type your full legal name" required><label class="checkline"><input id="waiverAgree" type="checkbox" required> I have read, understood, and agree to the waiver and release agreement.</label><h2>Choose Class & Schedule</h2><label for="classType">Class Type</label><select id="classType" required><option value="">Select class</option><option>Static Pole</option><option>Spinny Heels Pole</option><option>Aerial Hoop</option><option>Private Class</option></select><div class="form-row"><div><label for="bookingDate">Preferred Date</label><input id="bookingDate" type="date" required></div><div><label for="bookingTime">Preferred Time</label><select id="bookingTime" required><option value="">Select time</option><option>10:00 AM</option><option>1:00 PM</option><option>4:00 PM</option><option>7:00 PM</option></select></div></div><h2>Class Package</h2><div class="form-row"><div><label for="packageType">Package</label><select id="packageType" required><option value="">Select package</option><option>Single Class</option><option>4-Class Package</option><option>8-Class Package</option><option>Private Class</option></select></div><div><label for="students">Number of Students</label><input id="students" type="number" min="1" max="10" value="1" required></div></div><div class="payment-box"><strong>Total:</strong> <span id="priceDisplay">Select a package to see the total.</span></div><h2>Payment</h2><div class="notice"><strong>Payment:</strong> Add your bank or GCash QR here later. Booking is confirmed only after payment proof is sent and verified.</div><label for="notes">Notes / Questions</label><textarea id="notes"></textarea><button class="btn btn-primary" type="submit">Send Booking & Payment Proof</button><div id="confirmation" class="confirmation hidden">Thank you. WhatsApp will open so you can send your details and payment proof.</div></form></section><aside class="panel"><h2>How Booking Works</h2><p><strong>1.</strong> Fill in student details.</p><p><strong>2.</strong> Read and sign the waiver.</p><p><strong>3.</strong> Pick date, time, class, and package.</p><p><strong>4.</strong> Pay by bank/GCash.</p><p><strong>5.</strong> Send proof through WhatsApp.</p><p><strong>6.</strong> We confirm your slot.</p></aside></div></div></main><footer class="footer"><div class="container">© 2026 Legacy Pole & Aerial Dance Studio · Tanza, Cavite</div></footer><script src="booking.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Pole Classes | Legacy Pole & Aerial Dance Studio Cavite</title>
+
+<meta name="description" content="Book pole dance and aerial classes in Cavite at Legacy Pole & Aerial Dance Studio. Secure online booking, waiver agreement, class packages, and payment instructions.">
+
+<meta name="keywords" content="Pole Dance Cavite, Aerial Dance Cavite, Pole Studio Tanza, Pole Classes Philippines, Legacy Pole Studio, Pole Fitness Cavite">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f8f5fb;
+color:#222;
+}
+
+header{
+background:#fff;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#222;
+font-weight:bold;
+}
+
+.hero{
+padding:60px 20px 30px;
+max-width:1200px;
+margin:auto;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+margin-top:30px;
+}
+
+.step{
+background:linear-gradient(90deg,#9b4dff,#ff4db8);
+color:white;
+padding:14px;
+text-align:center;
+border-radius:30px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+padding:30px 20px 80px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 4px 20px rgba(0,0,0,0.06);
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+input,select,textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:16px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,#9b4dff,#ff4db8);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+.pdf-box{
+height:500px;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #ddd;
+margin-bottom:20px;
+}
+
+iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+.check{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:white;
+border-top:1px solid #eee;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+LEGACY POLE & AERIAL DANCE STUDIO
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="classes.html">Classes</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<p style="color:#9b4dff;font-weight:bold;">
+ONLINE BOOKING
+</p>
+
+<h1>Book Your Class</h1>
+
+<p>
+Complete your details, sign the waiver, choose your class package, then send payment proof through WhatsApp.
+</p>
+
+<div class="steps">
+<div class="step">1. Info</div>
+<div class="step">2. Waiver</div>
+<div class="step">3. Calendar</div>
+<div class="step">4. Package</div>
+<div class="step">5. Payment</div>
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="card">
+
+<h2>Student Information</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="phone" placeholder="Mobile Number">
+
+<input type="email" id="email" placeholder="Email Address">
+
+<select id="classType">
+<option>Static Pole</option>
+<option>Spin Pole</option>
+<option>Heels Pole</option>
+<option>Aerial Class</option>
+</select>
+
+<input type="date" id="day">
+
+<select id="package">
+<option>Single Class - ₱850</option>
+<option>5 Class Package</option>
+<option>10 Class Package</option>
+</select>
+
+<textarea id="notes" placeholder="Questions or notes"></textarea>
+
+<h2>Waiver Agreement</h2>
+
+<div class="pdf-box">
+<iframe src="Legacy_Pole_Aerial_Waiver.pdf"></iframe>
+</div>
+
+<input type="text" id="signature" placeholder="Type your full legal name">
+
+<div class="check">
+<input type="checkbox" id="waiverAgree">
+<label>I have read and agree to the waiver and release agreement.</label>
+</div>
+
+<button onclick="validateWaiver()">
+Reserve My Spot Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>How Booking Works</h2>
+
+<ol style="line-height:2;">
+<li>Fill in student details.</li>
+<li>Read and sign the waiver.</li>
+<li>Pick date, class, and package.</li>
+<li>Pay by bank or GCash.</li>
+<li>Send proof through WhatsApp.</li>
+<li>We confirm your slot.</li>
+</ol>
+
+<h2>Payment Instructions</h2>
+
+<p>
+GCash / Bank details will appear here.
+</p>
+
+<p>
+After payment, click the booking button and attach proof in WhatsApp.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Legacy Pole & Aerial Dance Studio
+
+</footer>
+
+<script>
+
+function validateWaiver(){
+
+const waiverChecked =
+document.getElementById("waiverAgree").checked;
+
+const signature =
+document.getElementById("signature").value.trim();
+
+if(!waiverChecked){
+alert("Please agree to the waiver before booking.");
+return;
+}
+
+if(signature === ""){
+alert("Please enter your digital signature.");
+return;
+}
+
+sendBooking();
+
+}
+
+function sendBooking(){
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const email =
+document.getElementById("email").value;
+
+const classType =
+document.getElementById("classType").value;
+
+const day =
+document.getElementById("day").value;
+
+const packageType =
+document.getElementById("package").value;
+
+const notes =
+document.getElementById("notes").value;
+
+const signature =
+document.getElementById("signature").value;
+
+const message =
+`NEW BOOKING REQUEST
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Class: ${classType}
+Date: ${day}
+Package: ${packageType}
+
+Digital Signature:
+${signature}
+
+Notes:
+${notes}`;
+
+window.open(
+`https://wa.me/639063782296?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+}
+
+</script>
+
+</body>
+</html>
