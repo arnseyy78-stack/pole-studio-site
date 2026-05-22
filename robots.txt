@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arnseyy78-stack.github.io/pole-studio-site/sitemap.xml
