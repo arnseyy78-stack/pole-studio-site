@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Waiver | Legacy Pole Studio</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f5fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:white;
+    width:90%;
+    max-width:900px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+p{
+    color:#666;
+    line-height:1.7;
+}
+
+.waiver-box{
+    margin-top:30px;
+    height:300px;
+    overflow-y:scroll;
+    border:1px solid #ddd;
+    padding:20px;
+    border-radius:15px;
+    background:#fafafa;
+}
+
+.checkbox{
+    margin-top:25px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#8b5cf6,#ec4899);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:not-allowed;
+    opacity:0.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Studio Waiver</h1>
+
+<p>Please read and accept the waiver before continuing.</p>
+
+<div class="waiver-box">
+
+<h3>Legacy Pole & Aerial Dance Studio Waiver</h3>
+
+<p>
+I understand that participation in pole dance, aerial hoop,
+stretching, and fitness activities involves physical activity
+and risk of injury.
+
+I voluntarily participate in all classes and activities.
+
+I release Legacy Pole & Aerial Dance Studio, instructors,
+staff, and owners from liability for injuries or damages.
+
+I confirm I am medically fit to participate.
+
+I agree to follow all studio safety rules and instructions.
+</p>
+
+</div>
+
+<div class="checkbox">
+<input type="checkbox" id="agree">
+<label for="agree">
+I have read and agree to the waiver.
+</label>
+</div>
+
+<button id="continueBtn" disabled>
+Continue to Calendar
+</button>
+
+</div>
+
+<script>
+
+const checkbox = document.getElementById("agree");
+const button = document.getElementById("continueBtn");
+
+checkbox.addEventListener("change", function(){
+
+    if(this.checked){
+        button.disabled = false;
+        button.style.opacity = "1";
+        button.style.cursor = "pointer";
+    } else {
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.style.cursor = "not-allowed";
+    }
+
+});
+
+button.addEventListener("click", function(){
+    window.location.href = "calendar.html";
+});
+
+</script>
+
+</body>
+</html>
