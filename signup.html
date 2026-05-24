@@ -90,41 +90,8 @@ opacity:0.9;
 <input type="tel" placeholder="Emergency Contact Number">
 
 <button class="btn" id="continueBtn" disabled>Continue</button>
- 
 
 </form>
 
-</div>
-<script>
-const inputs = document.querySelectorAll("input");
-const button = document.getElementById("continueBtn");
-
-function validateForm() {
-
-    let allFilled = true;
-
-    inputs.forEach(input => {
-        if(input.value.trim() === ""){
-            allFilled = false;
-        }
-    });
-
-    button.disabled = !allFilled;
-
-    if(allFilled){
-        button.style.opacity = "1";
-        button.style.cursor = "pointer";
-    } else {
-        button.style.opacity = "0.5";
-        button.style.cursor = "not-allowed";
-    }
-}
-
-inputs.forEach(input => {
-    input.addEventListener("input", validateForm);
-});
-
-validateForm();
-</script>
-</body>
-</html>
+</div> 
+ 
