@@ -68,7 +68,39 @@ opacity:0.9;
 
 </style>
 </head>
+<script>
 
+const inputs = document.querySelectorAll("input");
+const button = document.getElementById("continueBtn");
+
+function checkForm() {
+
+    let allFilled = true;
+
+    inputs.forEach(input => {
+        if(input.value.trim() === ""){
+            allFilled = false;
+        }
+    });
+
+    if(allFilled){
+        button.disabled = false;
+        button.style.opacity = "1";
+        button.style.cursor = "pointer";
+    } else {
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.style.cursor = "not-allowed";
+    }
+}
+
+inputs.forEach(input => {
+    input.addEventListener("input", checkForm);
+});
+
+checkForm();
+
+</script>
 <body>
 
 <div class="container">
@@ -89,7 +121,9 @@ opacity:0.9;
 
 <input type="tel" placeholder="Emergency Contact Number">
 
-<button class="btn" id="continueBtn" disabled>Continue</button>
+<button class="btn" id="continueBtn" disabled style="opacity:0.5;cursor:not-allowed;">
+Continue
+</button>
 
 </form>
 
